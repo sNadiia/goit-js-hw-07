@@ -35,13 +35,16 @@ galleryRef.onclick = (e) => {
         `<img width="1400" height="900" src="${e.target.dataset.source}">`
       )
       .show();
+    document.addEventListener("keydown", closeModalOnEscape);
   } else {
     return;
   }
 };
-document.addEventListener("keydown", closeModalOnEscape);
+document.removeEventListener("keydown", closeModalOnEscape);
 function closeModalOnEscape(event) {
   if (event.target.nodeName === "A") {
-    console.log("done");
-  }
+    console.log("close");
+    // basicLightbox.close();
 }
+  }
+
