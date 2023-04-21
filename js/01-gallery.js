@@ -39,3 +39,9 @@ galleryRef.onclick = (e) => {
     return;
   }
 };
+document.addEventListener("keydown", closeModalOnEscape);
+function closeModalOnEscape(event) {
+  if (event.target.nodeName === "A") {
+    console.log("done");
+  }
+}
